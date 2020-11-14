@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../p5/p5.js" type="text/javascript"></script>
+    <script src="../p5/addons/p5.dom.js" type="text/javascript"></script>
+    <script src="../p5/addons/p5.sound.js" type="text/javascript"></script>
+    <script src="sketch.js" type="text/javascript"></script>    
+
+
+    <!-- custom CSS -->
+    <style>
+        body{
+            background-color: #d1e2ff;
+            font-family: monospace;
+            margin: 0px;
+        }
+        canvas{
+            margin: auto;
+            border: 2px solid white;
+            float: left;
+            margin: 0px;
+            width: 70%;
+        }
+        h1{
+            text-align: center;
+            border-bottom: 2px solid gray;
+            width: 30%;
+            margin: auto;
+            padding-top: 30px;
+            margin-bottom: 30px;
+        }
+        #controls{
+            background-color: rgb(255,255,255,40%);
+            font-size: 20px;
+            font-weight: bold;
+/*            border: 2px solid black;*/
+            width: 30%;
+            float: left;
+            text-align: right;
+            padding: 50px 20px 0px 0px;
+            margin: auto;
+            margin-right: 40px; 
+            margin-left: 20px;
+        }
+        form{
+/*            border: 2px solid black;*/
+        }
+        .clearF{
+            clear: left;
+        }
+        h2{
+            text-align: center;
+            border-bottom: 2px solid gray;
+            width: 50%;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #doc{
+            margin-bottom: 50px;
+/*            border: 2px solid black;*/
+            width: 70%;
+            margin:auto;
+            margin-bottom: 50px;
+        }
+        h3{
+            border-bottom: 2px solid black;
+            width: 30%;
+            padding-bottom: 10px;
+        }
+        footer{
+            border-top: 2px solid black;
+            text-align: center;
+            padding-top: 5px;
+        }
+    </style>
+  </head>
+    <body>
+      <div id="controls">
+          <p>Change Character Speed</p>
+          <form>
+            Penguin Speed:<br>
+            <input type="range" id="range1" min="1" max="6" step="1" value="1" oninput="updatePenguin(this);" onchange="updatePenguin(this);">
+            <p>Bear Control:<br>
+            <input type="range" id="range2" min="-5" max="5" step="1" value="0" oninput="updateBear(this);" onchange="updateBear(this);">
+          </form>
+      </div>
+      <div id="canvasHere"></div>
+          <div class="clearF"></div>
+    <!--      <hr>-->
+      <p>  
+      <h2>DOCUMENTATION</h2>
+      <div id="doc">
+          <h3>Design Process</h3>
+          <p>My initial design for this game was a 2d platformer. However,
+          I decided to go with a simple WASD-controlled game where a character
+          has to reach a part of a map to win.<br>
+          I separated my game into several sections:
+            <ol>
+                <li>Starting Menu</li>
+                <li>Difficulty Selection Menu</li>
+                <li>Gameplay</li>
+                <li>End Menu</li>
+            </ol>
+          For the starting menu, I wanted a simple background that described the
+          overall environment of the game: a game situated somewhere in Antarctica.
+          At first, the start button and game title were written in text, but I soon
+          discovered that using images for the button and title would allow the game
+          to appear more "arcade-like."<p>
+          The character that the user controls is a penguin. I used
+          <a href="https://convertimage.net/photo-size-editing-tools/online-mirror-symmetry-effect.asp">this</a> website to flip the characters around horizontally.<p>
+          <img src="images/doc1.PNG" width="300px" height="300px"><p>
+          I divided the game into two difficulties:
+          <ol>
+              <li>Easy</li>
+              <li>Normal</li>
+          </ol>
+          Easy difficulty only displays two enemies, while normal difficulty displays four<p>
+          The gameplay is fairly simple: use the WASD keys to get the penguin
+          to the igloo near the top right of the game. <p>
+          If the penguin fails to reach the igloo, i.e., the penguin touches a polar bear, the player is brought to the lose screen. From there, the player has the option to play again, but the loss is counted.<p>
+          However, if the penguin does reach the igloo, the player gains a point and is able to play again.<p>
+          In addition, several sound files were selected from <a href="https://freesound.org/">freesounds.org</a> to create a more interactive experience in the game.<p><img src="images/doc2.PNG" width="300px" height="300px"><p>
+          Overall, my inspiritation for developing this game derived from the multiple flash games I've gotten the opportunity of playing years prior.
+          <h3>Physical Controller</h3>
+          The physical controller that my group and I designed used Play-Doh.<p>
+          <img src="images/doc6.jpg" width="300px" height="300px"><p>
+          At the time we created this physical controller, this game was not yet fully developed, so I used a groupmate's game to test out the device. Below are some screenshots of the development process.<p>
+          <img src="images/doc3.jpg">
+          <img src="images/doc4.jpg">
+          <img src="images/doc5.jpg"><p>
+          We used Play-Doh to complete our electrical circuit. In total, 4 Play-Doh balls were used to connect to the WASD ports on the Makey Makey.<p>
+          <img src="images/doc7.jpg" width="400px" height="300px"><p>
+          Successfully, the Play-Doh balls were able to act as an alternative to the keyboard. 
+          
+          <footer>©2018 Raymond Shi (rs5955)</footer>
+      </div>    
+        
+  </body>
+</html>

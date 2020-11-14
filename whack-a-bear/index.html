@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Whack a Bear</title>
+    <link rel="icon" type="image/jpg" href="images/bearIcon.jpg"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="../p5/p5.js" type="text/javascript"></script>
+    <script src="../p5/addons/p5.dom.js" type="text/javascript"></script>
+    <script src="../p5/addons/p5.sound.js" type="text/javascript"></script>
+
+    <script src="sketch.js" type="text/javascript"></script>
+
+    <!-- custom CSS -->
+    <style>
+        body{
+            background-color: #a1d1b8;
+            font-family: 'roboto';
+            margin: auto;
+        }
+        canvas{
+            border: 2px solid white;
+        }
+        h1{
+            text-align: center;
+            border-bottom: 3px solid black;
+            width:40%;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            padding-bottom: 10px;
+        }
+        #doc{
+            width: 50%;
+            margin: auto;
+            padding-top: 30px;
+            padding-bottom: 100px;
+            font-size: 16px;
+        }
+        h2{
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        p{
+            margin-top: 5px;
+        }
+    </style>
+  </head>
+  <body>
+      <div id="gameHere"></div>
+      <div id="doc">
+          <h2>DOCUMENTATION</h2>
+          <p>When I designed this game, I decided to go with polar bears as the
+          enemy. The goal is to use the cursor (or hammer) to click on as many
+          bears as possible when they pop up. Doing so increases the points.
+          However, missing any clicks will increase the number of misses.</p>
+          <p>Whack-a-Mole is a popular arcade game where players use a hammer to 
+          hit moles when they appear. The following image is an example of how a typical whack-a-mole game appears. </p>
+          <img src="images/doc1.jpg" width="300px" height="300px">
+          <p>The holes where the bears appear are fishing holes.</p>
+          <img src="images/hole.png" width="200px" height="200px">
+          <p>For this game, I decided to go with a different theme. Instead of a mole,
+           I used polar bears. For the background of the game, I used several blue
+          backgrounds:</p>
+          <img src="images/gameplayBG.jpeg" width="300px" height="300px">
+          <img src="images/titleBG.jpg" width="300px" height="300px">
+          <p>Overall, my objective was to create a game similar to whack-a-mole,
+          but designed in a way that suited my style.</p>
+      </div>
+  </body>
+</html>
