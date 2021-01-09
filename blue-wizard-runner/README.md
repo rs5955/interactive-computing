@@ -2,3 +2,6 @@
 
 ## preview
 ![preview](documentationImages/preview.png)
+
+## gameplay
+![gameplay](documentationImages/gameplay.gif)
